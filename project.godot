@@ -13,6 +13,22 @@ config_version=4
 config/name="ludum-dare-49"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneManager="*res://src/SceneManager.tscn"
+SoundManager="*res://src/SoundManager.tscn"
+
+[display]
+
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
+
 [physics]
 
 common/enable_pause_aware_picking=true
