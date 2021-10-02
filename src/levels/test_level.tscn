@@ -163,7 +163,7 @@
 
 [sub_resource type="Curve2D" id=2]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 304.314, 135.216, -0.125, -0.375, -9.25, -5.375, 173.189, 133.466, 5.42014, 19.912, -0.375, 0.125, 152.547, 110.52, 0, 0, 0, 0, 151.814, 47.7162 )
+"points": PoolVector2Array( 0, 0, 0, 0, 304.314, 135.216, 10.9824, 1.28026, -10.9824, -1.28026, 172.81, 134.271, 0, 0, 0, 0, 158.616, 127.799, 1.95536, 17.7071, -1.95536, -17.7071, 152.547, 110.52, 0, 0, 0, 0, 151.814, 47.7162 )
 }
 
 [node name="Node" type="Node"]
@@ -177,13 +177,13 @@ format = 1
 tile_data = PoolIntArray( 196617, -2147483640, 0, 262153, -2147483643, 0, 327689, -2147483642, 0, 393225, -2147483640, 0, 458761, -2147483638, 0, 524299, 8, 0, 524300, 1, 0, 524301, 1610612736, 0, 524302, 8, 0, 524303, 1, 0, 524304, 2, 0, 524305, 8, 0, 524306, 0, 0 )
 
 [node name="Path" type="Path2D" parent="World"]
-position = Vector2( -1.18921, 1.78381 )
 curve = SubResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Enemy" parent="World/Path" instance=ExtResource( 2 )]
 position = Vector2( 304.314, 135.216 )
-rotation = -3.12552
+rotation = 3.13925
+scale = Vector2( 1, 1 )
 
 [node name="SpawnRate" type="Timer" parent="World/Path"]
 autostart = true

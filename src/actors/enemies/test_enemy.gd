@@ -1,16 +1,22 @@
 extends Enemy
 
+var ass = preload("res://assets/sprites/tanque_ass.png")
+var tanque = preload("res://assets/sprites/tanque.png")
+var cnt = 0
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func _process(delta):
+	_rotate_sprite()
 
+	if cnt == 5:
+		print("Pathfollow =" + (rotation_degrees as String))
+		print("Body =" + ($Body.rotation_degrees as String))
+	cnt = (cnt + 1) % 6
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	var type = load("res://src/actors/enemies/test_enemy.gd")
-	var instance = type.new()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _rotate_sprite():
+	if rotation_degrees >= -180 + 45:
+		$Body/Sprite.texture = ass
+		$Body/Sprite.rotation_degrees = 90
+	else:
+		$Body/Sprite.texture = tanque
+		$Body/Sprite.rotation_degrees = 180
+		

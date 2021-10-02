@@ -1,8 +1,8 @@
 extends Path2D
 
 
-export var spawn = [[5, "res://src/actors/enemies/test_enemy.tscn"],
-					[2, "res://src/actors/enemies/test_enemy2.tscn"]]
+export var spawn = [[1, "res://src/actors/enemies/test_enemy.tscn"],
+					[0, "res://src/actors/enemies/test_enemy.tscn"]]
 
 
 func _ready():
