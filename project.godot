@@ -8,20 +8,37 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "PathFollow2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://src/actors/enemies/enemy.gd"
+} ]
+_global_script_class_icons={
+"Enemy": ""
+}
+
 [application]
 
 config/name="ludum-dare-49"
+run/main_scene="res://src/levels/test_level.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-SceneManager="*res://src/SceneManager.tscn"
-SoundManager="*res://src/SoundManager.tscn"
+scene_manager="*res://src/scene_manager.tscn"
+sound_manager="*res://src/sound_manager.tscn"
 
 [display]
 
+window/size/width=512
+window/size/height=300
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[global]
+
+display=false
 
 [importer_defaults]
 
@@ -35,4 +52,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
