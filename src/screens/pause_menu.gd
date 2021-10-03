@@ -26,4 +26,4 @@ func _on_Restart_button_down():
 func _on_Exit_button_down():
 	print("c")
 	_change_pause_state()
-	scene_manager.load_scene("res://src/screens/main_menu/MainMenu.tscn", "fade")
+	scene_manager.load_scene("res://src/screens/main_menu.tscn", "fade")

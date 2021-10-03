@@ -8,4 +8,4 @@ func _on_Exit_button_down():
 
 
 func _on_Play_button_down():
-	scene_manager.load_scene("res://src/levels/testlvl_Path.gd", "fade")
+	scene_manager.load_scene("res://src/levels/testlvl/test_level.tscn", "fade")
