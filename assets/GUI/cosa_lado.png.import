@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pause_completo.png-6da61ef41fbe86ed180fa09b2437a08a.stex"
+path="res://.import/cosa_lado.png-1dc00567dc662ad408ac334e9f386c67.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/pause_completo.png"
-dest_files=[ "res://.import/pause_completo.png-6da61ef41fbe86ed180fa09b2437a08a.stex" ]
+source_file="res://assets/GUI/cosa_lado.png"
+dest_files=[ "res://.import/cosa_lado.png-1dc00567dc662ad408ac334e9f386c67.stex" ]
 
 [params]
 
