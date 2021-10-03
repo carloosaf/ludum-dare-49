@@ -5,7 +5,7 @@ var side = preload("res://assets/sprites/tanque.png")
 var cnt = 0
 
 func _ready():
-	get_node("../Rotate").connect("rotate", self, "change_sprite")
+	get_node("../RotationPoint").connect("rotate", self, "change_sprite")
 
 #func _fixed_process(delta):
 #	if cnt == 5:
