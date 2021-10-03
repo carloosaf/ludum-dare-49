@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/tiles/test_tileset.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/enemies/test_enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/reactor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/levels/testlvl_Path.gd" type="Script" id=4]
+[ext_resource path="res://src/levels/rotation_point.tscn" type="PackedScene" id=5]
 
 [sub_resource type="TileSet" id=1]
 0/name = "test_tileset.png 0"
@@ -187,6 +188,8 @@ scale = Vector2( 1, 1 )
 
 [node name="SpawnRate" type="Timer" parent="World/Path"]
 autostart = true
+
+[node name="RotationPoint" parent="World/Path" instance=ExtResource( 5 )]
 
 [node name="Reactor" parent="World" instance=ExtResource( 3 )]
 position = Vector2( 151.99, 50.2874 )
