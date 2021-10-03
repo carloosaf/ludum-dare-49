@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/GUI/turret_menu.gd" type="Script" id=1]
+
+[node name="TurretMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="test_turret" type="Button" parent="."]
+margin_left = 149.245
+margin_top = 221.787
+margin_right = 169.245
+margin_bottom = 241.787
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="test_turret2" type="Button" parent="."]
+margin_left = 345.465
+margin_top = 226.544
+margin_right = 365.465
+margin_bottom = 246.544
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
