@@ -10,7 +10,6 @@ extends Enemy
 func _ready():
 	var type = load("res://src/actors/enemies/test_enemy.gd")
 	var instance = type.new()
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
