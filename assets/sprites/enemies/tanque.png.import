@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tanque.png-f6aa8e122bea9e821a41b5ac103c7a0c.stex"
+path="res://.import/tanque.png-ea8e6d0b7b79a3cf5a820fb698aedfcb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tanque.png"
-dest_files=[ "res://.import/tanque.png-f6aa8e122bea9e821a41b5ac103c7a0c.stex" ]
+source_file="res://assets/sprites/enemies/tanque.png"
+dest_files=[ "res://.import/tanque.png-ea8e6d0b7b79a3cf5a820fb698aedfcb.stex" ]
 
 [params]
 

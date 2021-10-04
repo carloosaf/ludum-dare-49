@@ -1,18 +1,19 @@
 extends Path2D
 
-export var spawn = [[10, "res://src/actors/enemies/test_enemy.tscn"],
-					[0, "res://src/actors/enemies/test_enemy.tscn"]]
+export var spawn = [[2, "res://src/actors/enemies/car.tscn"],
+					[2, "res://src/actors/enemies/tank.tscn"],
+					[2, "res://src/actors/enemies/moto.tscn"]]
 
 
 func _ready():
 	spawn_enemies()
 
 func spawn_enemies():
-	var i = spawn[0]
-	var type = load(i[1])
-	for j in range(i[0]):
-		var instance = type.instance()
-		instance.set_offset(0)
-		instance.loop = false
-		add_child(instance)
-		yield($SpawnRate, "timeout")
+	for i in spawn:
+		var type = load(i[1])
+		for j in range(i[0]):
+			var instance = type.instance()
+			instance.set_offset(0)
+			instance.loop = false
+			add_child(instance)
+			yield($SpawnRate, "timeout")
