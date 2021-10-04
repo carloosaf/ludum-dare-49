@@ -1,13 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
+[ext_resource path="res://assets/GUI/toggle_on..png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/turrets/base1.png" type="Texture" id=2]
 [ext_resource path="res://src/actors/turrets/turret.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/turrets/gun1.png" type="Texture" id=4]
+[ext_resource path="res://assets/GUI/toggle_off..png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 46.2737
 
-[node name="Test_turret" type="Node2D"]
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[node name="Test_turret" type="Node2D" groups=[
+"turrets",
+]]
 script = ExtResource( 3 )
 
 [node name="Sprite2" type="Sprite" parent="."]
@@ -28,10 +44,19 @@ texture = ExtResource( 4 )
 [node name="turret_cooldown" type="Timer" parent="."]
 
 [node name="OnOff" type="CheckButton" parent="."]
-margin_left = 13.6759
-margin_top = -19.0273
-margin_right = 89.6759
-margin_bottom = 20.9727
+margin_left = -9.11317
+margin_top = -23.8294
+margin_right = 8.88683
+margin_bottom = -9.82941
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/hover_pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+pressed = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
