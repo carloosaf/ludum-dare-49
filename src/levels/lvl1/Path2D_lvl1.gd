@@ -11,7 +11,7 @@ func _ready():
 
 func _process(delta):
 	if (len(get_tree().get_nodes_in_group("enemies")) == 0 and finished):
-		scene_manager.load_scene("res://src/screens/main_menu.tscn", "fade")
+		scene_manager.load_scene("res://src/levels/lvl2/lvl2.tscn", "fade")
 
 func spawn_enemies():
 	for i in spawn:

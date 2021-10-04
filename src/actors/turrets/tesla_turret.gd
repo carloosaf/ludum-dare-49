@@ -1,6 +1,6 @@
 extends Node2D
 
-export var stun_time : float = 2.5 ## secs
+export var stun_time : float = 1.5 ## secs
 
 onready var area : Area2D 
 onready var raycast : RayCast2D 
@@ -8,8 +8,7 @@ onready var cooldown_timer : Timer
 onready var stun_timer: Timer = $stun_cooldown
 onready var stun_sprite: Timer = $stun_sprite_timer
 
-export var turret_cadence : float = 1
-export var turret_damage : int = 50
+export var turret_cadence : float = 3
 
 onready var bullet : AnimatedSprite = $AnimatedSprite
 var stun = false
@@ -20,7 +19,6 @@ var target
 
 func _ready():
 	target = null
-	turret_cadence = 5 
 	bullet.visible = false
 	bullet.stop()
 	cooldown_timer = $turret_cooldown

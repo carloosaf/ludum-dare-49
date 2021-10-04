@@ -7,7 +7,7 @@ onready var raycast : RayCast2D = $RayCast2D
 onready var cooldown_timer : Timer  = $turret_cooldown
 
 export var turret_cadence : float = 0.5
-export var turret_damage : int = 100
+export var turret_damage : int = 25
 
 var shot : bool = false				## if true -> cooldown 
 var target_queue = []				## all enemies inside range 

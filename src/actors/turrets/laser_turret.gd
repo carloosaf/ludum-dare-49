@@ -8,8 +8,8 @@ onready var cooldown_timer : Timer
 
 class_name laser_turret
 
-export var turret_cadence : float = 0.25
-export var turret_damage : int = 10
+export var turret_cadence : float = 0.15
+export var turret_damage : int = 3
 
 var shot : bool = false				## if true -> cooldown 
 var target_queue = []				## all enemies inside range 

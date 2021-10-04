@@ -2,7 +2,7 @@ extends Enemy
 
 var ass = preload("res://assets/sprites/enemies/coche_ass.png")
 var side = preload("res://assets/sprites/enemies/coche.png")
-var damage = 20
+var damage = 15
 
 func _ready():
 	velocity = 75
