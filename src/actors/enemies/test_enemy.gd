@@ -4,8 +4,10 @@ var ass = preload("res://assets/sprites/tanque_ass.png")
 var side = preload("res://assets/sprites/tanque.png")
 var cnt = 0
 
+
 func _ready():
 	get_node("../RotationPoint").connect("rotate", self, "_change_sprite")
+	damage = 10
 
 #func _fixed_process(delta):
 #	if cnt == 5:

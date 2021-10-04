@@ -1,6 +1,40 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://assets/GUI/turret_menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/GUI/TurretMenu/menu.png" type="Texture" id=2]
+[ext_resource path="res://assets/GUI/TurretMenu/turret_button.png" type="Texture" id=3]
+[ext_resource path="res://assets/GUI/TurretMenu/laser_button.png" type="Texture" id=4]
+[ext_resource path="res://assets/GUI/TurretMenu/tesla_button.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
 
 [node name="TurretMenu" type="Control"]
 anchor_right = 1.0
@@ -10,22 +44,70 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="test_turret" type="Button" parent="."]
-margin_left = 149.245
-margin_top = 221.787
-margin_right = 169.245
-margin_bottom = 241.787
-text = "1"
+[node name="Rectangle" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -113.0
+margin_top = -75.0
+margin_right = 113.0
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="test_turret2" type="Button" parent="."]
-margin_left = 345.465
-margin_top = 226.544
-margin_right = 365.465
-margin_bottom = 246.544
-text = "2"
+[node name="Turret" type="Button" parent="Rectangle"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -19.5
+margin_right = 42.0
+margin_bottom = 19.5
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Laser" type="Button" parent="Rectangle"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -21.0
+margin_top = -19.5
+margin_right = 21.0
+margin_bottom = 19.5
+custom_styles/hover = SubResource( 6 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 8 )
+custom_styles/disabled = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tesla" type="Button" parent="Rectangle"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -65.0
+margin_top = -19.5
+margin_right = -29.0
+margin_bottom = 19.5
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/disabled = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+icon = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
