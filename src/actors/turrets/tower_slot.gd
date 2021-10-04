@@ -9,16 +9,16 @@ func _on_TowerSlot_input_event(viewport, event, shape_idx):
 
 func _place_turret():
 	var menu = get_node("../../GUI/TurretMenu")
-	
+	menu.visible = not menu.visible
+	var path = yield(menu, "any_button_pressed")
 	menu.visible = not menu.visible
 	
-	var path
+	var loaded = load(path)
+	var instance = loaded.instance()
+	instance.add_to_group("turret")
 	
-	path = yield(get_node("../../GUI/TurretMenu"), "any_button_pressed")
-	menu.visible = not menu.visible
-	print(path)
-	
-	var cosa = load(path)
-	var instance = cosa.instance()
-	
+	var children = get_children()
+	for child in children:
+		if child.is_in_group("turret"):
+			child.queue_free()
 	add_child(instance)

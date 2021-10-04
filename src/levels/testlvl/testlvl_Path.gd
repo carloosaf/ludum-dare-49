@@ -1,7 +1,7 @@
 extends Path2D
 
 
-export var spawn = [[5, "res://src/actors/enemies/test_enemy.tscn"],
+export var spawn = [[20, "res://src/actors/enemies/test_enemy.tscn"],
 					[0, "res://src/actors/enemies/test_enemy.tscn"]]
 
 
