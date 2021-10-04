@@ -4,4 +4,4 @@ signal rotate
 
 func _on_Rotate_body_entered(body):
 	if body.is_in_group("enemies"):
-		emit_signal("rotate", body)
+		body.get_parent().change_sprite()

@@ -1,13 +1,16 @@
 extends Path2D
 
-export var spawn = [[2, "res://src/actors/enemies/car.tscn"],
-					[2, "res://src/actors/enemies/tank.tscn"],
-					[2, "res://src/actors/enemies/moto.tscn"]]
-
+export var spawn = [[6, "res://src/actors/enemies/car.tscn"],
+					[1, "res://src/actors/enemies/tank.tscn"]]
+var finished = false
 
 func _ready():
 	yield(get_tree().create_timer(2.0), "timeout")
 	spawn_enemies()
+
+func _process(delta):
+	if (len(get_tree().get_nodes_in_group("enemies")) == 0 and finished):
+		scene_manager.load_scene("res://src/screens/main_menu.tscn", "fade")
 
 func spawn_enemies():
 	for i in spawn:
@@ -18,3 +21,4 @@ func spawn_enemies():
 			instance.loop = false
 			add_child(instance)
 			yield($SpawnRate, "timeout")
+	finished = true

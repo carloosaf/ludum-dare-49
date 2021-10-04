@@ -11,12 +11,10 @@ func _change_pause_state() -> void:
 		visible = new_pause_state
 
 func _on_Resume_button_down():
-	print("a")
 	_change_pause_state()
 
 
 func _on_Restart_button_down():
-	print("b")
 	var filename = 	get_tree().current_scene.filename
 	_change_pause_state()
 	scene_manager.load_scene(filename, "fade")
@@ -24,6 +22,5 @@ func _on_Restart_button_down():
 
 
 func _on_Exit_button_down():
-	print("c")
 	_change_pause_state()
 	scene_manager.load_scene("res://src/screens/main_menu.tscn", "fade")
