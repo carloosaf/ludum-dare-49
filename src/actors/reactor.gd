@@ -13,4 +13,4 @@ func _ready():
 func _on_Reactor_body_entered(body):
 	if body.is_in_group("enemies"):
 		print("Reactor dañado")
-		body.queue_free()
+		body.get_parent().queue_free()

@@ -4,8 +4,8 @@
 [ext_resource path="res://src/actors/enemies/enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/enemies/test_enemy.gd" type="Script" id=3]
 
-[sub_resource type="CircleShape2D" id=1]
-radius = 5.41027
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.99, 6.99726 )
 
 [node name="Enemy" instance=ExtResource( 2 )]
 script = ExtResource( 3 )

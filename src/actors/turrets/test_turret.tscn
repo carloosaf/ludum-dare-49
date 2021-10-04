@@ -20,12 +20,15 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-cast_to = Vector2( 100, 0 )
+cast_to = Vector2( 1, 0 )
+
+[node name="canon" type="Position2D" parent="RayCast2D"]
+position = Vector2( 2.96171, 0.0198879 )
 
 [node name="Sprite" type="Sprite" parent="RayCast2D"]
-position = Vector2( 32, 0 )
+position = Vector2( 2.50393, -0.00018507 )
 rotation = -1.57079
-scale = Vector2( 0.0331917, 0.993799 )
+scale = Vector2( 0.0331917, 0.0720469 )
 texture = ExtResource( 1 )
 
 [node name="turret_cooldown" type="Timer" parent="."]
