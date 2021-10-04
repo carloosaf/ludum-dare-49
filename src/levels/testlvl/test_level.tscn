@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/tiles/test_tileset.png" type="Texture" id=1]
+[ext_resource path="res://src/GUI/unstability_bar.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/reactor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/levels/testlvl/testlvl_Path.gd" type="Script" id=4]
 [ext_resource path="res://src/levels/rotation_point.tscn" type="PackedScene" id=5]
@@ -180,6 +181,9 @@ visible = false
 [node name="TurretMenu" parent="GUI" instance=ExtResource( 8 )]
 visible = false
 mouse_filter = 2
+
+[node name="UnstabilityBar" parent="GUI" instance=ExtResource( 2 )]
+step = 0.001
 
 [node name="World" type="Node" parent="."]
 
