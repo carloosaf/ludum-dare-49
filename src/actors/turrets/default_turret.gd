@@ -1,15 +1,13 @@
 extends Node2D
 
-var bullet 
+var bullet = "res://src/actors/bullets/turret_bullet.tscn"
 
-onready var area : Area2D 
-onready var raycast : RayCast2D 
-onready var cooldown_timer : Timer 
+onready var area : Area2D = $Area2D
+onready var raycast : RayCast2D = $RayCast2D
+onready var cooldown_timer : Timer  = $turret_cooldown
 
-class_name Turret
-
-export var turret_cadence : float = 1
-export var turret_damage : int = 50
+export var turret_cadence : float = 0.5
+export var turret_damage : int = 100
 
 var shot : bool = false				## if true -> cooldown 
 var target_queue = []				## all enemies inside range 
@@ -19,10 +17,7 @@ var cnt = 0
 var consumption = 5
 
 func _ready():
-	area = $Area2D
-	raycast = $RayCast2D
-	cooldown_timer = $turret_cooldown
-	bullet = "res://src/actors/bullets/test_bullet.tscn"
+	pass
 	
 func _physics_process(delta):
 	if target_queue.size() != 0:
@@ -79,4 +74,6 @@ func _on_turret_cooldown_timeout():
 func _on_CheckButton_toggled(button_pressed):
 	self.set_physics_process(button_pressed)
 
-	
+
+func _on_OnOff_toggled(button_pressed):
+	self.set_physics_process(button_pressed)

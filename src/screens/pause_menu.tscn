@@ -192,6 +192,7 @@ __meta__ = {
 
 [node name="Node2D" type="AnimatedSprite" parent="Panel/Animations/Plug"]
 frames = SubResource( 18 )
+
 frame = 10
 playing = true
 

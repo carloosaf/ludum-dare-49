@@ -1,15 +1,15 @@
 extends Node2D
 
-var bullet 
+export var bullet: PackedScene = preload("res://src/actors/bullets/laser_bullet.tscn")
 
 onready var area : Area2D 
-onready var raycast : RayCast2D 
+onready var raycast : RayCast2D  = $RayCast2D
 onready var cooldown_timer : Timer 
 
-class_name Turret
+class_name laser_turret
 
-export var turret_cadence : float = 1
-export var turret_damage : int = 50
+export var turret_cadence : float = 0.25
+export var turret_damage : int = 10
 
 var shot : bool = false				## if true -> cooldown 
 var target_queue = []				## all enemies inside range 
@@ -17,12 +17,11 @@ var target
 
 var cnt = 0
 var consumption = 5
+onready var bullets = []
 
 func _ready():
 	area = $Area2D
-	raycast = $RayCast2D
 	cooldown_timer = $turret_cooldown
-	bullet = "res://src/actors/bullets/test_bullet.tscn"
 	
 func _physics_process(delta):
 	if target_queue.size() != 0:
@@ -31,7 +30,6 @@ func _physics_process(delta):
 		if !is_instance_valid(target):
 			target = null
 			return
-		_point_towards(target)
 		_shoot(target)
 	else:					
 		_idle()
@@ -39,18 +37,18 @@ func _physics_process(delta):
 func _shoot(target ):
 	if !shot:
 		cooldown_timer.start(turret_cadence)
-		var b = load(bullet).instance()
-		add_child(b)
-		b.bullet_damage = turret_damage
-		b.global_transform = raycast.get_node("canon").global_transform 
+		for can in raycast.get_children():
+			var b = bullet.instance()
+			add_child(b)
+			b.global_transform = can.global_transform
+			b.bullet_damage = turret_damage
+
 		if target.health <= 0:
 			target_queue.remove(target_queue.find(target))
 			target = null
 		shot = true
 		
-			
-func _point_towards(enemy ):		## puede uno calentarse y poner lerp 
-	raycast.look_at(enemy.position)					
+						
 	
 func _idle():
 	pass
@@ -75,8 +73,6 @@ func _on_Area2D_body_exited(body):
 
 func _on_turret_cooldown_timeout():
 	shot = false
-
-func _on_CheckButton_toggled(button_pressed):
-	self.set_physics_process(button_pressed)
-
 	
+func _on_OnOff_toggled(button_pressed):
+	self.set_physics_process(button_pressed)

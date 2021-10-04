@@ -17,5 +17,4 @@ func _physics_process(delta):
 		follow(delta)
 
 func take_damage(damage: int):
-	print("Au")
 	health = health - damage

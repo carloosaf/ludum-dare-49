@@ -41,3 +41,4 @@ position = Vector2( 161.253, 130.962 )
 position = Vector2( 151.99, 50.2874 )
 
 [node name="GUI" parent="." instance=ExtResource( 2 )]
+

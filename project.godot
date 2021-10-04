@@ -9,19 +9,37 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Area2D",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://src/actors/bullets/bullet.gd"
+}, {
 "base": "PathFollow2D",
 "class": "Enemy",
 "language": "GDScript",
 "path": "res://src/actors/enemies/enemy.gd"
 }, {
+"base": "Bullet",
+"class": "Laser_bullet",
+"language": "GDScript",
+"path": "res://src/actors/bullets/laser_bullet.gd"
+}, {
 "base": "Node2D",
 "class": "Turret",
 "language": "GDScript",
 "path": "res://src/actors/turrets/turret.gd"
+}, {
+"base": "Node2D",
+"class": "laser_turret",
+"language": "GDScript",
+"path": "res://src/actors/turrets/laser_turret.gd"
 } ]
 _global_script_class_icons={
+"Bullet": "",
 "Enemy": "",
-"Turret": ""
+"Laser_bullet": "",
+"Turret": "",
+"laser_turret": ""
 }
 
 [application]
