@@ -9,5 +9,9 @@ func _ready():
 	get_node("../RotationPoint").connect("rotate", self, "_change_sprite")
 
 func change_sprite():
+	if $Body/Sprite.texture == side:
 		$Body/Sprite.texture = ass
 		$Body/Sprite.rotation_degrees = 90
+	else: 
+		$Body/Sprite.texture = side
+		$Body/Sprite.rotation_degrees = 180
