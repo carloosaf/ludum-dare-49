@@ -41,7 +41,7 @@ cast_to = Vector2( 1, 0 )
 position = Vector2( 2.96171, 0.0198879 )
 
 [node name="Sprite" type="Sprite" parent="RayCast2D"]
-position = Vector2( -0.264866, -0.132435 )
+rotation = -1.5708
 texture = ExtResource( 4 )
 
 [node name="turret_cooldown" type="Timer" parent="."]

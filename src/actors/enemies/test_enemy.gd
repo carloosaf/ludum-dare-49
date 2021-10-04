@@ -3,7 +3,7 @@ extends Enemy
 var ass = preload("res://assets/sprites/tanque_ass.png")
 var side = preload("res://assets/sprites/tanque.png")
 var cnt = 0
-
+var damage
 
 func _ready():
 	get_node("../RotationPoint").connect("rotate", self, "_change_sprite")
