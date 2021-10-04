@@ -6,6 +6,7 @@ var damage = 10
 
 func _ready():
 	velocity = 75
+	health = 100
 	get_node("../RotationPoint").connect("rotate", self, "_change_sprite")
 
 func change_sprite():

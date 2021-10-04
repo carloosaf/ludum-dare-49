@@ -2,10 +2,11 @@ extends Enemy
 
 var ass = preload("res://assets/sprites/enemies/tanque_ass.png")
 var side = preload("res://assets/sprites/enemies/tanque.png")
-var damage = 20
+var damage = 30
 
 func _ready():
-	velocity = 50
+	velocity = 30
+	health = 400
 	get_node("../RotationPoint").connect("rotate", self, "_change_sprite")
 
 func change_sprite():
