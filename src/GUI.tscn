@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/GUI/unstability_bar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/GUI/turret_menu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/screens/pause_menu.tscn" type="PackedScene" id=7]
+
+[node name="GUI" type="Node"]
+
+[node name="TurretMenu" parent="." instance=ExtResource( 6 )]
+visible = false
+mouse_filter = 2
+
+[node name="UnstabilityBar" parent="." instance=ExtResource( 5 )]
+step = 0.001
+
+[node name="PauseMenu" parent="." instance=ExtResource( 7 )]
+pause_mode = 2
+visible = false

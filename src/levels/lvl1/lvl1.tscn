@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/actors/reactor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/turrets/tower_slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/GUI/unstability_bar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/tiles/tileset.tres" type="TileSet" id=4]
+[ext_resource path="res://src/levels/rotation_point.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/levels/lvl1/Path2D_lvl1.gd" type="Script" id=6]
+[ext_resource path="res://assets/GUI/turret_menu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/screens/pause_menu.tscn" type="PackedScene" id=8]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 448.027, 185.297, 0, 0, 0, 0, 303.538, 184.702, 4.59619, 5.3033, -4.59619, -5.3033, 287.187, 176.972, 0, 0, 0, 0, 279.754, 156.459, 3.35876, 6.54074, -3.35876, -6.54074, 279.159, 135.35, 0, 0, 0, 0, 264.889, 122.269, 0, 0, 0, 0, 244.375, 119.296, 0, 0, 0, 0, 136.752, 118.999 )
+}
+
+[node name="lvl1" type="Node"]
+
+[node name="World" type="Node" parent="."]
+
+[node name="TileMap" type="TileMap" parent="World"]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 458761, 1073741824, 0, 458762, 6, 0, 458763, 8, 0, 458764, 1073741824, 0, 458765, 1073741825, 0, 458766, 1, 0, 458767, 1073741824, 0, 458768, -536870901, 0, 589841, -2147483646, 0, 655377, 1610612746, 0, 720915, 1073741825, 0, 720916, 1073741824, 0, 720917, 1073741824, 0, 720918, 1073741832, 0, 720919, 8, 0, 720920, 0, 0, 720921, 5, 0, 720922, 1, 0, 720923, 0, 0 )
+
+[node name="Path2D" type="Path2D" parent="World"]
+curve = SubResource( 1 )
+script = ExtResource( 6 )
+
+[node name="SpawnRate" type="Timer" parent="World/Path2D"]
+wait_time = 1.5
+autostart = true
+
+[node name="RotationPoint" parent="World/Path2D" instance=ExtResource( 5 )]
+position = Vector2( 288.907, 177.392 )
+
+[node name="RotationPoint2" parent="World/Path2D" instance=ExtResource( 5 )]
+position = Vector2( 271.446, 126.992 )
+
+[node name="Reactor" parent="World" instance=ExtResource( 1 )]
+position = Vector2( 134.975, 112.38 )
+
+[node name="TowerSlots" type="Node" parent="World"]
+
+[node name="TowerSlot" parent="World/TowerSlots" instance=ExtResource( 2 )]
+position = Vector2( 178.704, 97.4071 )
+
+[node name="TowerSlot2" parent="World/TowerSlots" instance=ExtResource( 2 )]
+position = Vector2( 237.072, 96.5652 )
+
+[node name="TowerSlot3" parent="World/TowerSlots" instance=ExtResource( 2 )]
+position = Vector2( 255.312, 146.795 )
+
+[node name="TowerSlot4" parent="World/TowerSlots" instance=ExtResource( 2 )]
+position = Vector2( 343.426, 208.531 )
+
+[node name="TowerSlot5" parent="World/TowerSlots" instance=ExtResource( 2 )]
+position = Vector2( 413.299, 209.373 )
+
+[node name="TowerSlot6" parent="World/TowerSlots" instance=ExtResource( 2 )]
+position = Vector2( 375.135, 160.826 )
+
+[node name="TowerSlot7" parent="World/TowerSlots" instance=ExtResource( 2 )]
+position = Vector2( 204.241, 142.306 )
+
+[node name="TowerSlot8" parent="World/TowerSlots" instance=ExtResource( 2 )]
+position = Vector2( 305.874, 154.738 )
+
+[node name="GUI" type="Node" parent="."]
+
+[node name="UnstabilityBar" parent="GUI" instance=ExtResource( 3 )]
+margin_right = 45.0
+
+[node name="TurretMenu" parent="GUI" instance=ExtResource( 7 )]
+visible = false
+
+[node name="PauseMenu" parent="GUI" instance=ExtResource( 8 )]
+visible = false
