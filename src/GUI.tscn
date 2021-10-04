@@ -14,5 +14,4 @@ mouse_filter = 2
 step = 0.001
 
 [node name="PauseMenu" parent="." instance=ExtResource( 7 )]
-pause_mode = 2
 visible = false

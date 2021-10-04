@@ -20,7 +20,10 @@ radius = 28.9207
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
-[node name="laser_turret" type="Node2D"]
+[node name="laser_turret" type="Node2D" groups=[
+"laser_turrets",
+"turrets",
+]]
 script = ExtResource( 4 )
 
 [node name="laser" type="Sprite" parent="."]
