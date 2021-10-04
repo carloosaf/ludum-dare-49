@@ -176,6 +176,7 @@ __meta__ = {
 
 [node name="Node2D" type="AnimatedSprite" parent="Panel/Animations/Cable"]
 frames = SubResource( 9 )
+frame = 6
 playing = true
 
 [node name="Plug" type="Control" parent="Panel/Animations"]
@@ -190,7 +191,7 @@ __meta__ = {
 
 [node name="Node2D" type="AnimatedSprite" parent="Panel/Animations/Plug"]
 frames = SubResource( 18 )
-frame = 6
+frame = 1
 playing = true
 
 [node name="Text" type="Control" parent="Panel"]

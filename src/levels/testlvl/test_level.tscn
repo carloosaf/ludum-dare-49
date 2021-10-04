@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/tiles/test_tileset.png" type="Texture" id=1]
 [ext_resource path="res://src/GUI/unstability_bar.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://src/screens/pause_menu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/actors/turrets/tower_slot.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/GUI/turret_menu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/actors/turrets/tesla_turret.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/actors/turrets/laser_turret.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/actors/turrets/default_turret.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 0/name = "test_tileset.png 0"
@@ -209,3 +212,12 @@ position = Vector2( 161.253, 130.962 )
 
 [node name="Reactor" parent="World" instance=ExtResource( 3 )]
 position = Vector2( 151.99, 50.2874 )
+
+[node name="tesla_turret" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 266.639, 119.69 )
+
+[node name="laser_turret" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 29.8944, 41.4864 )
+
+[node name="turret" parent="World" instance=ExtResource( 11 )]
+position = Vector2( 223.824, 109.134 )
