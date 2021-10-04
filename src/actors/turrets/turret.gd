@@ -60,3 +60,7 @@ func _on_Area2D_body_exited(body):
 
 func _on_turret_cooldown_timeout():
 	shot = false
+
+func _on_CheckButton_toggled(button_pressed):
+	self.set_physics_process(button_pressed)
+	
