@@ -8,7 +8,7 @@ func _on_TowerSlot_input_event(viewport, event, shape_idx):
 
 
 func _place_turret():
-	var menu = get_node("../../GUI/TurretMenu")
+	var menu = get_node("../../../GUI/TurretMenu")
 	menu.visible = not menu.visible
 	var path = yield(menu, "any_button_pressed")
 	menu.visible = not menu.visible
