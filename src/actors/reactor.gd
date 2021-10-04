@@ -9,7 +9,13 @@ func _process(delta):
 	turrets = get_tree().get_nodes_in_group("turrets")
 	for turret in turrets:
 		if turret.is_physics_processing():
-			unstability += 0.05
+			print(turret.get_groups())
+			if turret.is_in_group("default_turrets"):
+				unstability += 0.05
+			elif turret.is_in_group("laser_turrets"):
+				unstability += 0.08
+			elif turret.is_in_group("tesla_turrets"):
+				unstability += 0.15 
 	unstability -= 0.035
 	
 	if unstability >= 100:
