@@ -125,6 +125,7 @@ font_data = SubResource( 19 )
 [sub_resource type="StyleBoxEmpty" id=35]
 
 [node name="PauseMenu" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
@@ -176,7 +177,7 @@ __meta__ = {
 
 [node name="Node2D" type="AnimatedSprite" parent="Panel/Animations/Cable"]
 frames = SubResource( 9 )
-frame = 3
+frame = 6
 playing = true
 
 [node name="Plug" type="Control" parent="Panel/Animations"]
@@ -191,7 +192,7 @@ __meta__ = {
 
 [node name="Node2D" type="AnimatedSprite" parent="Panel/Animations/Plug"]
 frames = SubResource( 18 )
-frame = 11
+frame = 10
 playing = true
 
 [node name="Text" type="Control" parent="Panel"]

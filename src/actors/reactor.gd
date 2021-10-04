@@ -10,7 +10,7 @@ func _process(delta):
 	for turret in turrets:
 		if turret.is_physics_processing():
 			unstability += 0.05
-	unstability -= 0.025
+	unstability -= 0.035
 	
 	if unstability >= 100:
 		var filename = 	get_tree().current_scene.filename
