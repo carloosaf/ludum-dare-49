@@ -172,19 +172,6 @@ _data = {
 
 [node name="Node" type="Node"]
 
-[node name="GUI" type="Node" parent="."]
-
-[node name="PauseMenu" parent="GUI" instance=ExtResource( 6 )]
-pause_mode = 2
-visible = false
-
-[node name="TurretMenu" parent="GUI" instance=ExtResource( 8 )]
-visible = false
-mouse_filter = 2
-
-[node name="UnstabilityBar" parent="GUI" instance=ExtResource( 2 )]
-step = 0.001
-
 [node name="World" type="Node" parent="."]
 
 [node name="TowerSlot" parent="World" instance=ExtResource( 7 )]
@@ -202,6 +189,7 @@ curve = SubResource( 2 )
 script = ExtResource( 4 )
 
 [node name="SpawnRate" type="Timer" parent="World/Path"]
+wait_time = 1.5
 autostart = true
 
 [node name="RotationPoint" parent="World/Path" instance=ExtResource( 5 )]
@@ -209,3 +197,16 @@ position = Vector2( 161.253, 130.962 )
 
 [node name="Reactor" parent="World" instance=ExtResource( 3 )]
 position = Vector2( 151.99, 50.2874 )
+
+[node name="GUI" type="Node" parent="."]
+
+[node name="TurretMenu" parent="GUI" instance=ExtResource( 8 )]
+visible = false
+mouse_filter = 2
+
+[node name="UnstabilityBar" parent="GUI" instance=ExtResource( 2 )]
+step = 0.001
+
+[node name="PauseMenu" parent="GUI" instance=ExtResource( 6 )]
+pause_mode = 2
+visible = false

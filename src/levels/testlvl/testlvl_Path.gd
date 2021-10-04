@@ -6,6 +6,7 @@ export var spawn = [[2, "res://src/actors/enemies/car.tscn"],
 
 
 func _ready():
+	yield(get_tree().create_timer(2.0), "timeout")
 	spawn_enemies()
 
 func spawn_enemies():
