@@ -15,6 +15,10 @@ var shot : bool = false				## if true -> cooldown
 var target_queue = []				## all enemies inside range 
 var target							
 
+var cnt = 0
+signal consumption
+var consumption = 5;
+
 func _physics_process(delta):
 	if target_queue.size() != 0:
 		_check_enemies()		
@@ -67,3 +71,13 @@ func _on_Area2D_body_exited(body):
 
 func _on_turret_cooldown_timeout():
 	shot = false
+
+func _on_CheckButton_toggled(button_pressed):
+	self.set_physics_process(button_pressed)
+	
+func _turret_consumption():
+	if cnt == 5:
+		emit_signal("consumption", consumption)
+	cnt = (cnt + 1) % 6
+	
+	

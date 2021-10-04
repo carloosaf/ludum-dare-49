@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/actors/enemies/enemy.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/tanque.png" type="Texture" id=2]
 
 [node name="Enemy" type="PathFollow2D" groups=[
 "enemies",
@@ -15,4 +16,7 @@ script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
 
-[node name="Sprite" type="Sprite" parent="Body"]
+[node name="Sprite" type="Sprite" parent="Body" groups=[
+"enemy_sprite",
+]]
+texture = ExtResource( 2 )
