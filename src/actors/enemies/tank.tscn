@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/actors/enemies/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/actors/enemies/tank.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/enemies/tanque.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9.60933, 7.24105 )
+
+[node name="Tank" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="Body" index="0"]
+shape = SubResource( 1 )
+
+[node name="Sprite" parent="Body" index="1"]
+rotation = 3.14159
+texture = ExtResource( 3 )

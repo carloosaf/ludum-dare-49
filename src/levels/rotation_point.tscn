@@ -3,6 +3,7 @@
 [ext_resource path="res://src/levels/rotation_point.gd" type="Script" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 2.79407
 
 [node name="RotationPoint" type="Area2D"]
 script = ExtResource( 1 )
