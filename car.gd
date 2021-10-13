@@ -1,18 +1,12 @@
 extends Enemy
 
-var ass = preload("res://assets/sprites/enemies/coche_ass.png")
-var side = preload("res://assets/sprites/enemies/coche.png")
-var damage = 15
+func _init():
+	health = 100	
+	damage = 15
+	velocity = 75
+	
+	ass = load("res://assets/sprites/enemies/coche_ass.png")	
+	side = preload("res://assets/sprites/enemies/coche.png")
 
 func _ready():
-	velocity = 75
-	health = 100
-	get_node("../RotationPoint").connect("rotate", self, "_change_sprite")
-
-func change_sprite():
-	if $Body/Sprite.texture == side:
-		$Body/Sprite.texture = ass
-		$Body/Sprite.rotation_degrees = 90
-	else: 
-		$Body/Sprite.texture = side
-		$Body/Sprite.rotation_degrees = 180
+	get_node("../RotationPoint").connect("rotate", self, "_change_sprite")	
