@@ -20,11 +20,11 @@ func _physics_process(delta):
 		if !is_instance_valid(target):
 			target = null
 		else:
-			_shoot(target)
+			shoot(target)
 	else:
-		_idle()
+		idle()
 
-func _shoot(target ):
+func shoot(target ):
 	if !shot:
 		cooldown_timer.start(turret_cadence)
 		for can in raycast.get_children():

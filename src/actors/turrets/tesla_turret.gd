@@ -2,8 +2,6 @@ extends Turret
 
 export var stun_time : float = 1.5 ## secs
 
-onready var area : Area2D 
-onready var raycast : RayCast2D 
 onready var cooldown_timer : Timer 
 onready var stun_timer: Timer = $stun_cooldown
 onready var stun_sprite: Timer = $stun_sprite_timer
@@ -13,7 +11,7 @@ export var turret_cadence : float = 3
 onready var bullet : AnimatedSprite = $AnimatedSprite
 var stun = false
 var stunned = []
-var shot : bool = false				## if true -> cooldown 
+var shot : bool = false             ## if true -> cooldown 
 
 func _ready():
 	target = null
@@ -27,12 +25,12 @@ func _physics_process(delta):
 	if target != null:					## shoot
 		if !is_instance_valid(target):
 			target = null
-			return
-		_shoot(target)
+		else:
+			shoot(target)
 	else:					
-		_idle()
+		idle()
 
-func _shoot(target):
+func shoot(target):
 	if !shot:
 		bullet.visible = true 
 		bullet.play()
@@ -48,7 +46,7 @@ func _shoot(target):
 func _on_Area2D_body_entered(body:KinematicBody2D):
 	if body.is_in_group("enemies"):
 		target_queue.push_back(body.get_parent())
-		
+
 func _on_Area2D_body_exited(body):
 	if body.get_parent() == target:
 		target = null

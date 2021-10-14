@@ -17,9 +17,11 @@ func _check_enemies():
 				tmp_enemy = enemy
 		target = tmp_enemy
 
-func _idle():
+func idle():
+	pass
+
+func shoot(target):
 	pass
 
 func _on_OnOff_toggled(button_pressed):
 	self.set_physics_process(button_pressed)
-

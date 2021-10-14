@@ -18,11 +18,11 @@ func _physics_process(delta):
 			target = null
 		else:
 			_point_towards(target)
-			_shoot(target)
+			shoot(target)
 	else:
-		_idle()
+		idle()
 
-func _shoot(target ):
+func shoot(target ):
 	if !shot:
 		cooldown_timer.start(turret_cadence)
 		var b = load(bullet).instance()
