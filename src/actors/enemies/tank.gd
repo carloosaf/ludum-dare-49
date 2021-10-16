@@ -1,9 +1,9 @@
 extends Enemy
 
 func _init():
-	health = 250
-	damage = 40
-	velocity = 30
+	health = 100
+	damage = 50
+	velocity = 40
 	
 	ass = load("res://assets/sprites/enemies/tanque_ass.png")
 	side = load("res://assets/sprites/enemies/tanque.png")

@@ -6,7 +6,7 @@ var target
 var target_queue = []
 
 func _ready():
-	$OnOff.connect("toggle", self, "_on_OnOff_toggled")
+	$OnOff.connect("toggled", self, "_on_OnOff_toggled")
 
 func _check_enemies():
 	var tmp_enemy

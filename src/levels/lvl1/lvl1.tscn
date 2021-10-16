@@ -5,9 +5,9 @@
 [ext_resource path="res://src/GUI/unstability_bar.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/tiles/tileset.tres" type="TileSet" id=4]
 [ext_resource path="res://src/levels/rotation_point.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/levels/lvl1/Path2D_lvl1.gd" type="Script" id=6]
-[ext_resource path="res://assets/GUI/turret_menu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/screens/turret_menu.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/screens/pause_menu.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/levels/lvl1/lvl1.gd" type="Script" id=9]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -15,6 +15,8 @@ _data = {
 }
 
 [node name="lvl1" type="Node"]
+script = ExtResource( 9 )
+spawn = null
 
 [node name="World" type="Node" parent="."]
 
@@ -26,7 +28,6 @@ tile_data = PoolIntArray( 458761, 1073741824, 0, 458762, 6, 0, 458763, 8, 0, 458
 
 [node name="Path2D" type="Path2D" parent="World"]
 curve = SubResource( 1 )
-script = ExtResource( 6 )
 
 [node name="SpawnRate" type="Timer" parent="World/Path2D"]
 wait_time = 1.5
