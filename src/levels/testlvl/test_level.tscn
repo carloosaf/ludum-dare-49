@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/tiles/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://src/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/reactor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/levels/testlvl/testlvl_Path.gd" type="Script" id=4]
 [ext_resource path="res://src/levels/rotation_point.tscn" type="PackedScene" id=5]

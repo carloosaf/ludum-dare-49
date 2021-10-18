@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/toggle_on..png-87ef2b43a500b694237e466cfbc42a5d.stex"
+path="res://.import/toggle_off..png-da2c89ef83a56b6a42b418b335565a4d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/toggle_on..png"
-dest_files=[ "res://.import/toggle_on..png-87ef2b43a500b694237e466cfbc42a5d.stex" ]
+source_file="res://assets/sprites/turrets/toggle_off..png"
+dest_files=[ "res://.import/toggle_off..png-da2c89ef83a56b6a42b418b335565a4d.stex" ]
 
 [params]
 

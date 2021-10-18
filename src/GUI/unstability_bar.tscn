@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/GUI/stability_bar_under.png" type="Texture" id=1]
-[ext_resource path="res://assets/GUI/unstability_bar_fg.png" type="Texture" id=2]
-[ext_resource path="res://assets/GUI/stability_bar_over.png" type="Texture" id=3]
+[ext_resource path="res://assets/GUI/UnstabilityBar/stability_bar_under.png" type="Texture" id=1]
+[ext_resource path="res://assets/GUI/UnstabilityBar/unstability_bar_fg.png" type="Texture" id=2]
+[ext_resource path="res://assets/GUI/UnstabilityBar/stability_bar_over.png" type="Texture" id=3]
 [ext_resource path="res://src/GUI/unstability_bar.gd" type="Script" id=4]
 
 [node name="UnstabilityBar" type="TextureProgress"]

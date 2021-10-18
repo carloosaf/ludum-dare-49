@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pause_sin.png-b2cbc9e488e9106e4790a3e545b20df7.stex"
+path="res://.import/cosa_lado.png-a2e5ea992d80a45108084e139bc4e7c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/pause_sin.png"
-dest_files=[ "res://.import/pause_sin.png-b2cbc9e488e9106e4790a3e545b20df7.stex" ]
+source_file="res://assets/GUI/MainMenu/cosa_lado.png"
+dest_files=[ "res://.import/cosa_lado.png-a2e5ea992d80a45108084e139bc4e7c0.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cosa_lado.png-1dc00567dc662ad408ac334e9f386c67.stex"
+path="res://.import/cable2.png-03f8e1e6519a479278f681b0bbf9904d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/cosa_lado.png"
-dest_files=[ "res://.import/cosa_lado.png-1dc00567dc662ad408ac334e9f386c67.stex" ]
+source_file="res://assets/GUI/PauseMenu/cable2.png"
+dest_files=[ "res://.import/cable2.png-03f8e1e6519a479278f681b0bbf9904d.stex" ]
 
 [params]
 

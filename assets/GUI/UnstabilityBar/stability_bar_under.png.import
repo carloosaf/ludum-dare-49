@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite-0002-Sheet.png-486978728b39cf571c25eb440e62a127.stex"
+path="res://.import/stability_bar_under.png-28d363ffa8ebfa750ed6f0ac29300f90.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/Sprite-0002-Sheet.png"
-dest_files=[ "res://.import/Sprite-0002-Sheet.png-486978728b39cf571c25eb440e62a127.stex" ]
+source_file="res://assets/GUI/UnstabilityBar/stability_bar_under.png"
+dest_files=[ "res://.import/stability_bar_under.png-28d363ffa8ebfa750ed6f0ac29300f90.stex" ]
 
 [params]
 
