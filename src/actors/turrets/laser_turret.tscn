@@ -1,24 +1,11 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/sprites/turrets/laser.png" type="Texture" id=1]
-[ext_resource path="res://assets/GUI/toggle_off..png" type="Texture" id=2]
-[ext_resource path="res://assets/GUI/toggle_on..png" type="Texture" id=3]
+[ext_resource path="res://src/actors/turrets/OnOff.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/turrets/laser_turret.gd" type="Script" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 28.9207
-
-[sub_resource type="StyleBoxEmpty" id=2]
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxEmpty" id=5]
-
-[sub_resource type="StyleBoxEmpty" id=6]
-
-[sub_resource type="StyleBoxEmpty" id=7]
 
 [node name="laser_turret" type="Node2D" groups=[
 "laser_turrets",
@@ -70,25 +57,8 @@ shape = SubResource( 1 )
 
 [node name="turret_cooldown" type="Timer" parent="."]
 
-[node name="OnOff" type="CheckButton" parent="."]
-margin_left = -8.95568
-margin_top = -28.1604
-margin_right = 9.04432
-margin_bottom = -14.1604
-custom_icons/off = ExtResource( 2 )
-custom_icons/on = ExtResource( 3 )
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/hover_pressed = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
-pressed = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="OnOff" parent="." instance=ExtResource( 2 )]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="turret_cooldown" to="." method="_on_turret_cooldown_timeout"]
-[connection signal="toggled" from="OnOff" to="." method="_on_OnOff_toggled"]

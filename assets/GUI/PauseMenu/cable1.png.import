@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/stability_bar_over.png-a5ea4549eeef43eff3ab6f4b3f08c4fb.stex"
+path="res://.import/cable1.png-27d034b31eb42669e4b20257e6f4f8ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/stability_bar_over.png"
-dest_files=[ "res://.import/stability_bar_over.png-a5ea4549eeef43eff3ab6f4b3f08c4fb.stex" ]
+source_file="res://assets/GUI/PauseMenu/cable1.png"
+dest_files=[ "res://.import/cable1.png-27d034b31eb42669e4b20257e6f4f8ef.stex" ]
 
 [params]
 

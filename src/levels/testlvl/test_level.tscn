@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/tiles/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://src/GUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/GUI/GUI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/actors/reactor.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/levels/testlvl/testlvl_Path.gd" type="Script" id=4]
 [ext_resource path="res://src/levels/rotation_point.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/actors/turrets/tower_slot.tscn" type="PackedScene" id=7]
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 304.314, 135.216, 10.9824, 1.28026, -10.9824, -1.28026, 172.81, 134.271, 0, 0, 0, 0, 158.616, 127.799, 1.95536, 17.7071, -1.95536, -17.7071, 152.547, 110.52, 0, 0, 0, 0, 151.814, 47.7162 )
 }
@@ -27,7 +27,7 @@ format = 1
 tile_data = PoolIntArray( 196617, -2147483640, 0, 262153, -2147483643, 0, 327689, -2147483642, 0, 393225, -2147483640, 0, 458761, -2147483638, 0, 524299, 8, 0, 524300, 1, 0, 524301, 1610612736, 0, 524302, 1, 0, 524303, 1, 0, 524304, 2, 0, 524305, 8, 0, 524306, 0, 0 )
 
 [node name="Path" type="Path2D" parent="World"]
-curve = SubResource( 2 )
+curve = SubResource( 1 )
 script = ExtResource( 4 )
 
 [node name="SpawnRate" type="Timer" parent="World/Path"]
@@ -41,4 +41,3 @@ position = Vector2( 161.253, 130.962 )
 position = Vector2( 151.99, 50.2874 )
 
 [node name="GUI" parent="." instance=ExtResource( 2 )]
-

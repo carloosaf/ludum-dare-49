@@ -1,9 +1,7 @@
-extends Node2D
+extends Turret
 
 export var stun_time : float = 1.5 ## secs
 
-onready var area : Area2D 
-onready var raycast : RayCast2D 
 onready var cooldown_timer : Timer 
 onready var stun_timer: Timer = $stun_cooldown
 onready var stun_sprite: Timer = $stun_sprite_timer
@@ -13,9 +11,7 @@ export var turret_cadence : float = 3
 onready var bullet : AnimatedSprite = $AnimatedSprite
 var stun = false
 var stunned = []
-var shot : bool = false				## if true -> cooldown 
-var target_queue = []				## all enemies inside range 
-var target	
+var shot : bool = false             ## if true -> cooldown 
 
 func _ready():
 	target = null
@@ -29,15 +25,12 @@ func _physics_process(delta):
 	if target != null:					## shoot
 		if !is_instance_valid(target):
 			target = null
-			return
-		_shoot(target)
+		else:
+			shoot(target)
 	else:					
-		_idle()
+		idle()
 
-func _idle():
-	pass
-	
-func _shoot(target):
+func shoot(target):
 	if !shot:
 		bullet.visible = true 
 		bullet.play()
@@ -50,19 +43,10 @@ func _shoot(target):
 		cooldown_timer.start(turret_cadence)
 		stun_timer.start(stun_time)
 
-func _check_enemies():
-	var tmp_enemy
-	if target_queue.size() > 0:
-		tmp_enemy = target_queue[0]
-		for enemy in target_queue:
-			if enemy.offset > tmp_enemy.offset:
-				tmp_enemy = enemy
-		target = tmp_enemy
-
 func _on_Area2D_body_entered(body:KinematicBody2D):
 	if body.is_in_group("enemies"):
 		target_queue.push_back(body.get_parent())
-		
+
 func _on_Area2D_body_exited(body):
 	if body.get_parent() == target:
 		target = null
@@ -80,7 +64,3 @@ func _on_stun_cooldown_timeout():
 func _on_stun_sprite_timer_timeout():
 	bullet.stop()
 	bullet.visible = false
-
-
-func _on_OnOff_toggled(button_pressed):
-	self.set_physics_process(button_pressed)

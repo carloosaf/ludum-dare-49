@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/stability_bar_under.png-95d38b2fe20208374ac2cb9349667f7d.stex"
+path="res://.import/logo.png-cca082655ed2e26d21f23c5a0d137319.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/GUI/stability_bar_under.png"
-dest_files=[ "res://.import/stability_bar_under.png-95d38b2fe20208374ac2cb9349667f7d.stex" ]
+source_file="res://assets/GUI/MainMenu/logo.png"
+dest_files=[ "res://.import/logo.png-cca082655ed2e26d21f23c5a0d137319.stex" ]
 
 [params]
 

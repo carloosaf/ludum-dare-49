@@ -24,22 +24,22 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/actors/bullets/laser_bullet.gd"
 }, {
+"base": "Node",
+"class": "Lvl",
+"language": "GDScript",
+"path": "res://src/levels/lvl.gd"
+}, {
 "base": "Node2D",
 "class": "Turret",
 "language": "GDScript",
 "path": "res://src/actors/turrets/turret.gd"
-}, {
-"base": "Node2D",
-"class": "laser_turret",
-"language": "GDScript",
-"path": "res://src/actors/turrets/laser_turret.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
 "Enemy": "",
 "Laser_bullet": "",
-"Turret": "",
-"laser_turret": ""
+"Lvl": "",
+"Turret": ""
 }
 
 [application]

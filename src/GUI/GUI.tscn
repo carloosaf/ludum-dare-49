@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/GUI/unstability_bar.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/GUI/turret_menu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/screens/turret_menu.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/screens/pause_menu.tscn" type="PackedScene" id=7]
 
 [node name="GUI" type="Node"]
